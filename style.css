@@ -1,0 +1,514 @@
+/* Malupet na Navbar*/
+/* WELCOME PO PASOK PO KAYO HAHHAAHAHAAH */
+.navbar-custom {
+    background-color: #FBDFA2;
+    border-bottom: 3px solid #8b4545;
+    padding: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Stsn Logo and yung Title */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.navbar-logo {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar-title {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-title .library {
+    color: #8b4545;
+}
+
+/* Gitna ng Navigation Bar namin*/
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+    color: #8b4545;
+}
+
+/* RIGHT: Buttons */
+.navbar-right {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.btn-login:hover {
+    color: #8b4545;
+}
+
+.btn-signup {
+    background-color: #8b4545;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: #6b3535;
+}
+
+/* Dito yung ano style ng navbar pag pinindot nagiging puti o na hhighlight*/
+.navbar-center a.active {
+    color: #8b4545;
+    font-weight: bold;
+    border-bottom: 3px solid #8b4545;
+    padding-bottom: 0.3rem;
+    margin-bottom: -3px; /* ← this cancels out the 3px border pushing it up */
+    transition: all 0.3s ease;
+}
+.navbar-center a:hover {
+    color: #8b4545;
+}
+/* Ending ninyo este ending ng navbar*/
+/* pinaikot ikot na libro */
+.book-section {
+    display: block;
+    text-align: center;
+}
+
+#bookCarousel {
+    max-width: 1000px;
+}
+#bookCarousel .carousel-inner {
+   padding: 0 55px;
+}
+.book-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.book-item {
+    flex: 0 0 auto;
+}
+
+.book-cover {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.book-title {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+#bookCarousel .carousel-control-prev,
+#bookCarousel .carousel-control-next {
+    width: 3rem;
+    opacity: 1;
+}
+
+#bookCarousel .carousel-control-prev-icon,
+#bookCarousel .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 1.1rem;
+    background-size: 50%;
+}
+/* dito tinapos yung paikot-ikot */
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.book-table thead {
+    background-color: #f5f5f5;
+}
+
+.book-table th {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.book-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+
+.book-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.book-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.book-table tbody tr:hover {
+    background-color: #efefef;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-title {
+        font-size: 1rem;
+    }
+    
+    .navbar-center {
+        gap: 1rem;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-center a {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-right {
+        gap: 0.3rem;
+    }
+    
+    .btn-login, .btn-signup {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    #bookCarousel {
+        max-width: 100%;
+    }
+    
+    #bookCarousel .carousel-inner {
+        padding: 0 25px; 
+    }
+    
+    .book-cover {
+        width: 110px; 
+        height: 160px; 
+    }
+    
+    .book-row {
+        gap: 0.6rem; 
+        flex-wrap: nowrap;  
+    }
+    
+    .book-title {
+        font-size: 0.8rem;
+    }
+    
+    /* TABLE */
+    .book-table {
+        font-size: 0.85rem;
+    }
+    
+    .book-table th,
+    .book-table td {
+        padding: 8px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 0.9rem;
+    }
+    
+    .navbar-center a {
+        font-size: 0.8rem;
+    }
+    #bookCarousel .carousel-inner {
+        padding: 0 15px; 
+    }
+    
+    .book-cover {
+        width: 80px;  
+        height: 130px;
+    }
+    
+    .book-row {
+        gap: 0.3rem;  
+        flex-wrap: nowrap; 
+    }
+    
+    .book-title {
+        font-size: 0.65rem;
+    }
+}
+/* Ending ng table */
+
+
+/* The About us */
+.studio {
+  padding: 20px 24px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+
+}
+
+.studio .wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.studio .eyebrow {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 26px;
+  color: #b5652f;
+  margin-bottom: 4px;
+}
+
+.studio h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  color: #3a2c22;
+  margin-bottom: 18px;
+}
+
+.studio .intro {
+  max-width: 520px;
+  margin: 0 auto 60px;
+  color: #6b5c4d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.studio .row {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  justify-content: center;
+  gap: 46px;
+}
+
+.studio .polaroid {
+  background: #fffdf8;
+  width: 220px;
+  padding: 14px 14px 34px;
+  box-shadow: 0 12px 26px rgba(60, 40, 20, 0.18);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* the looks of the pictures */
+.studio .polaroid:nth-child(1) { transform: rotate(-6deg); }
+.studio .polaroid:nth-child(2) { transform: rotate(3deg); }
+.studio .polaroid:nth-child(3) { transform: rotate(-2deg); }
+.studio .polaroid:nth-child(4) { transform: rotate(5deg); }
+
+.studio .polaroid:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 34px rgba(60, 40, 20, 0.25);
+  z-index: 2;
+}
+
+.studio .tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 70px;
+  height: 26px;
+  background: rgba(230, 210, 160, 0.75);
+  border: 1px solid rgba(180, 150, 90, 0.4);
+}
+
+.studio .photo {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.studio .photo.c1 { background: url('pics/anton.png') center/cover no-repeat; }
+.studio .photo.c2 { background: url('pics/silverio.png') center/cover no-repeat; }
+.studio .photo.c3 { background: url('pics/david.png') center/cover no-repeat; }
+.studio .photo.c4 { background: url('pics/joemari.png') center/cover no-repeat; }
+
+.studio .name {
+  margin-top: 14px;
+  font-size: 17px;
+  color: #3a2c22;
+  font-weight: 700;
+}
+
+.studio .role {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 17px;
+  color: #b5652f;
+  margin-top: 2px;
+}
+
+@media (max-width: 540px) {
+  .studio .row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .studio .polaroid { width: 78vw; max-width: 260px; }
+}
+
+/* Dashboard ID Design */
+.dashboard-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.id {
+    width: 280px;
+    background-color: #ffffff;
+    border: 2px solid #3a1a1a;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', serif;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* <div class="id-top"> — logo + school name */
+.id-top {
+    background-color: #ffffff;
+    padding: 16px 12px 10px;
+    text-align: center;
+    border-bottom: 2px solid #3a1a1a;
+}
+
+/* <img class="id-logo"> — the STSN seal */
+.id-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+/* <p class="id-school-name"> — school name text */
+.id-school-name {
+    color: #8b2020;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* <div class="id-body"> — photo + student name */
+.id-body {
+    background-color: #ffffff;
+    padding: 18px 20px 14px;
+    text-align: center;
+    flex: 1;
+}
+
+/* <div class="id-picture-frame"> — box around the photo */
+.id-picture-frame {
+    width: 160px;
+    height: 150px;
+    border: 2px solid #3a1a1a;
+    border-radius: 5px;
+    margin: 0 auto 16px;
+    overflow: hidden;
+    background-color: #d0e8c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* <img> inside id-picture-frame — student photo */
+.id-picture-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* <p class="id-student-name"> — student's full name */
+.id-student-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+/* <div class="id-lrn"> — beige LRN strip */
+.id-lrn {
+    background-color: #ffff ;
+    border-top: 2px solid #3a1a1a;
+    border-bottom: 1px solid #3a1a1a;
+    padding: 7px 12px;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #1a1a1a;
+    letter-spacing: 0.04em;
+}
+
+/* <div class="id-bottom"> — dark maroon footer */
+.id-bottom {
+    background-color: #5a1a1a;
+    padding: 9px 12px;
+    text-align: center;
+}
+
+/* <p class="id-card-info"> — grade, strand, section text */
+.id-card-info {
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0;
+}
